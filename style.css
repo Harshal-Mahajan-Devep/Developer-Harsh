@@ -336,7 +336,7 @@ body.dark-mode .progress {
 .hero-section {
   min-height: 100vh;
   padding: 120px 40px 60px 80px;
-  background: url("./hero-image.png") center/cover no-repeat;
+  background: url("Image/hero-image.png") center/cover no-repeat;
   color: #ffffff;
   display: flex;
   align-items: center;
