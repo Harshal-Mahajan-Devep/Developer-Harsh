@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details | Full Stack E-Commerce Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Global Animation CSS File -->
+    <link rel="stylesheet" href="animations.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- CUSTOM NAVBAR -->
+    <nav class="custom-navbar">
+      <div class="nav-left">
+        <a href="index.html#home" class="brand-logo">Portfolio</a>
+        <div class="dot-separator">•</div>
+        <a href="tel:+918605621393" class="phone-badge">
+          <span class="phone-icon"><i class="fas fa-phone"></i></span>
+          <span>+91 8605621393</span>
+        </a>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu-list">
+        <li><a href="index.html#home" class="nav-item">Home</a></li>
+        <li><a href="index.html#about" class="nav-item">About</a></li>
+        <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+        <li><a href="index.html#services" class="nav-item">Services</a></li>
+        <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
+        <li><a href="contact.html" class="nav-item active">Contact</a></li>
+        <!-- मोबाईल मेनूमध्ये दाखवण्यासाठी Hire Me ची नवीन लिंक -->
+        <li class="mobile-only-item">
+          <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Theme Toggle Button (मोबाईल व डेस्कटॉप दोन्हीवर उजव्या बाजूला राहिल) -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle-btn"
+          aria-label="Toggle Theme"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- डेस्कटॉपवर दिसणारे Hire Me बटण -->
+        <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
+
+        <!-- Mobile Toggle Menu Button -->
+        <button
+          class="mobile-toggle-btn"
+          id="mobile-menu-toggle"
+          aria-label="Toggle Menu"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MAIN PROJECT DETAILS CONTAINER -->
+    <main class="project-detail-wrapper">
+      <div class="project-container">
+        <!-- LEFT COLUMN (Content, Slider & Comments) -->
+        <div class="project-left-col">
+          <!-- 4-IMAGE SLIDER BANNER CARD -->
+          <div class="project-banner-card reveal slide-down">
+            <div class="slider-wrapper">
+              <div class="slider-track" id="slider-track">
+                <div class="slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=1000&auto=format&fit=crop"
+                    alt="Project Screenshot 1"
+                    class="main-project-img"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                    alt="Project Screenshot 2"
+                    class="main-project-img"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop"
+                    alt="Project Screenshot 3"
+                    class="main-project-img"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1556742049-0a670f4a4591?q=80&w=1000&auto=format&fit=crop"
+                    alt="Project Screenshot 4"
+                    class="main-project-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Navigation Arrows -->
+              <button
+                class="slider-arrow prev-arrow"
+                id="prevBtn"
+                aria-label="Previous Slide"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                class="slider-arrow next-arrow"
+                id="nextBtn"
+                aria-label="Next Slide"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+
+              <!-- Dots Indicator -->
+              <div class="slider-dots" id="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+              </div>
+            </div>
+
+            <!-- Overlay Content -->
+            <div class="banner-overlay">
+              <div class="title-preview-row reveal slide-up delay-100">
+                <h1 class="project-main-title">
+                  E-Commerce Web Platform (React & PHP)
+                </h1>
+                <a
+                  href="https://your-live-demo-link.com"
+                  target="_blank"
+                  class="btn-live-preview"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Preview
+                </a>
+              </div>
+
+              <div class="project-stats-row reveal slide-up delay-200">
+                <span class="stat-badge"
+                  ><i class="fas fa-eye"></i> 1,450 Views</span
+                >
+                <span class="stat-badge"
+                  ><i class="fas fa-shopping-bag"></i> 89 Purchases</span
+                >
+                <span class="stat-badge"
+                  ><i class="fas fa-star"></i> 4.9 Rating</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Description Section -->
+          <section
+            class="project-description-section reveal slide-up delay-100"
+          >
+            <h2>Project Overview</h2>
+            <p>
+              This project is a high-performance, fully functional E-Commerce
+              application engineered using React JS for dynamic front-end views
+              and PHP CodeIgniter for back-end API management. Designed for
+              scalability, speed, and real-time order tracking.
+            </p>
+
+            <h3>Key Highlights</h3>
+            <ul class="description-list">
+              <li class="reveal slide-up delay-100">
+                <i class="fas fa-check-circle"></i> Complete Admin Dashboard
+                with analytics & real-time reports.
+              </li>
+              <li class="reveal slide-up delay-200">
+                <i class="fas fa-check-circle"></i> Integrated Razorpay / PayPal
+                Secure Payment Gateways.
+              </li>
+              <li class="reveal slide-up delay-300">
+                <i class="fas fa-check-circle"></i> Mobile-responsive and
+                cross-browser tested UI layout.
+              </li>
+              <li class="reveal slide-up delay-400">
+                <i class="fas fa-check-circle"></i> REST API-driven architecture
+                for seamless mobile application integration.
+              </li>
+            </ul>
+          </section>
+
+          <!-- Client Comment & Review Form Section -->
+          <section class="comment-section reveal slide-up delay-200">
+            <h2>Leave a Client Review & Comment</h2>
+            <p class="comment-subtext">
+              Have questions or worked with me on this? Leave your comment
+              below.
+            </p>
+
+            <form class="comment-form" onsubmit="event.preventDefault()">
+              <div class="form-row reveal slide-up delay-100">
+                <div class="form-group">
+                  <label for="client-name">Your Name *</label>
+                  <input
+                    type="text"
+                    id="client-name"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="client-email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="client-email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group reveal slide-up delay-200">
+                <label for="client-message">Comment / Review *</label>
+                <textarea
+                  id="client-message"
+                  rows="5"
+                  placeholder="Write your thoughts or feedback about this project..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- 6 Digit Captcha Box -->
+              <div class="captcha-box reveal slide-up delay-300">
+                <div class="captcha-display">
+                  <span class="captcha-code" id="captcha-code">849201</span>
+                  <button
+                    type="button"
+                    class="btn-refresh-captcha"
+                    title="Refresh Captcha"
+                    onclick="refreshCaptcha()"
+                  >
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                </div>
+                <div class="captcha-input-group">
+                  <input
+                    type="text"
+                    id="captcha-input"
+                    maxlength="6"
+                    placeholder="Enter 6-digit Captcha"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-submit-comment reveal slide-up delay-400"
+              >
+                Post Comment
+              </button>
+            </form>
+
+            <!-- Existing Client Comments Display -->
+            <div class="existing-comments">
+              <h3 class="reveal slide-up">Client Reviews (2)</h3>
+
+              <div class="single-comment reveal slide-up delay-100">
+                <div class="comment-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="comment-content">
+                  <div class="comment-header">
+                    <h4>Amit Sharma</h4>
+                    <span class="comment-date">2 days ago</span>
+                  </div>
+                  <p>
+                    Extremely clean code and smooth setup process. The API
+                    response time is remarkably fast!
+                  </p>
+                </div>
+              </div>
+
+              <div class="single-comment reveal slide-up delay-200">
+                <div class="comment-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="comment-content">
+                  <div class="comment-header">
+                    <h4>Rahul Verma</h4>
+                    <span class="comment-date">1 week ago</span>
+                  </div>
+                  <p>
+                    Great project structure! Harshal made it very easy to
+                    integrate with custom payment webhooks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN (Sticky Price & Checklist Card) -->
+        <aside class="project-right-col reveal slide-right delay-200">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="badge-tag">Full Source Code</span>
+              <div class="price-amount">
+                <span class="currency">₹</span>4,999
+                <span class="original-price">₹8,999</span>
+              </div>
+              <p class="price-note">One-time payment • Lifetime updates</p>
+            </div>
+
+            <div class="product-features-checklist">
+              <h4>Included in this Package:</h4>
+              <ul class="checklist-items">
+                <li>
+                  <i class="fas fa-check check-icon"></i>
+                  <span>Full React JS Source Code</span>
+                </li>
+                <li>
+                  <i class="fas fa-check check-icon"></i>
+                  <span>Backend REST API Scripts</span>
+                </li>
+                <li>
+                  <i class="fas fa-check check-icon"></i>
+                  <span>MySQL Database Schema (.sql)</span>
+                </li>
+                <li>
+                  <i class="fas fa-check check-icon"></i>
+                  <span>Complete Setup Documentation</span>
+                </li>
+                <li>
+                  <i class="fas fa-check check-icon"></i>
+                  <span>6 Months Technical Support</span>
+                </li>
+                <li>
+                  <i class="fas fa-check check-icon"></i>
+                  <span>Commercial Usage License</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card-action-btns">
+              <button class="btn-add-to-cart">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+              <button class="btn-buy-now">Buy Now</button>
+            </div>
+
+            <div class="payment-guarantee">
+              <i class="fas fa-shield-alt"></i> Safe & Secure Checkout
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-col brand-col reveal slide-up delay-100">
+          <img src="logo.png" alt="Developer Harsh Logo" class="footer-logo" />
+          <p>
+            Building high-performance, responsive web & mobile applications
+            tailored to drive real business growth.
+          </p>
+        </div>
+        <div class="footer-col reveal slide-up delay-200">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#services">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal slide-up delay-300">
+          <h4 class="footer-heading">Services</h4>
+          <ul>
+            <li><a href="index.html#services">Full Stack Development</a></li>
+            <li><a href="index.html#services">Web & Mobile Apps</a></li>
+            <li><a href="index.html#services">Custom Web Solutions</a></li>
+            <li><a href="requirement.html">Your Requirements</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-col reveal slide-up delay-400">
+          <h4 class="footer-heading">Contact Us</h4>
+          <p>+91 8605621393</p>
+          <p>Maharashtra, India</p>
+          <p>
+            <a href="mailto:contact@developerharsh.com"
+              >contact@developerharsh.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Harshal Mahajan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="cursor-circle">
+      <span></span>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button
+      id="scrollToTopBtn"
+      class="scroll-top-btn"
+      aria-label="Scroll to Top"
+    >
+      <i class="fa-solid fa-up-long"></i>
+    </button>
+
+    <!-- SCRIPT -->
+    <script src="javascript.js"></script>
+  </body>
+</html>

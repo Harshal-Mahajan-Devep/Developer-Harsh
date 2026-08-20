@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshal Mahajan | Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Global Animation CSS File -->
+    <link rel="stylesheet" href="animations.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="custom-navbar">
+      <div class="nav-left">
+        <a href="index.html#home" class="brand-logo">Portfolio</a>
+        <div class="dot-separator">•</div>
+        <a href="tel:+918605621393" class="phone-badge">
+          <span class="phone-icon"><i class="fas fa-phone"></i></span>
+          <span>+91 8605621393</span>
+        </a>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu-list">
+        <li><a href="index.html#home" class="nav-item">Home</a></li>
+        <li><a href="index.html#about" class="nav-item">About</a></li>
+        <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+        <li><a href="index.html#services" class="nav-item">Services</a></li>
+        <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
+        <li><a href="contact.html" class="nav-item active">Contact</a></li>
+        <li class="mobile-only-item">
+          <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <button
+          id="theme-toggle"
+          class="theme-toggle-btn"
+          aria-label="Toggle Theme"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
+
+        <button
+          class="mobile-toggle-btn"
+          id="mobile-menu-toggle"
+          aria-label="Toggle Menu"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section" id="home">
+      <!-- Watermark Background Text -->
+      <div class="bg-watermark-text">
+        <span>DEVELOPER</span>
+        <span>HARSH</span>
+      </div>
+
+      <div class="hero-container">
+        <div class="hero-badge reveal slide-down">
+          <span class="badge-dot"></span>
+          <span>Available for New Projects</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="hero-title reveal slide-up delay-100">
+          I DON'T JUST <br />
+          <span class="highlight-dark">BUILD WEBSITES.</span> <br />
+          I BUILD <br />
+          <span class="highlight-dark">DIGITAL EXPERIENCES.</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="hero-description reveal slide-up delay-200">
+          I transform ideas into modern, high-performance web and mobile
+          applications that look exceptional, work seamlessly, and help
+          businesses grow — from concept to launch.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons reveal slide-up delay-100">
+          <a href="projects.html" class="btn-primary">View Projects &rarr;</a>
+          <a href="contact.html" class="btn-secondary">Contact Me</a>
+        </div>
+
+        <!-- Bottom Stats Card -->
+        <div class="stats-card reveal zoom-in delay-200">
+          <div class="stat-item">
+            <span class="stat-number">1.5+</span>
+            <span class="stat-label">YEARS<br />EXPERIENCE</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">99+</span>
+            <span class="stat-label">PROJECTS<br />COMPLETED</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">CLIENT<br />SATISFACTION</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT / DISCOVER SECTION -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-text reveal slide-left">
+          <h2>Building Digital Experiences</h2>
+
+          <p>
+            I’m a Full Stack Web & Mobile App Developer passionate about
+            transforming ideas into modern, scalable, and user-friendly digital
+            solutions.
+          </p>
+
+          <p>
+            From responsive websites and powerful web applications to mobile
+            apps and custom business solutions, I focus on writing clean code,
+            creating intuitive interfaces, and delivering products that make a
+            real impact.
+          </p>
+
+          <a href="#contact" class="btn-primary">Let's Work Together</a>
+        </div>
+
+        <!-- Images Container -->
+        <div class="about-images-wrapper reveal slide-right delay-200">
+          <div class="main-image-box">
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop"
+              alt="Full Stack Web Developer"
+            />
+          </div>
+
+          <div class="overlapping-card top-card">
+            <img
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&auto=format&fit=crop"
+              alt="Code View"
+            />
+          </div>
+
+          <div class="overlapping-card bottom-card">
+            <img
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=400&auto=format&fit=crop"
+              alt="Mobile App View"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="section-header reveal slide-up">
+        <h2>Explore My Work & Expertise</h2>
+        <p>
+          From responsive websites to powerful web applications and mobile apps,
+          I create digital experiences built for performance, scalability, and
+          growth.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="project-card reveal slide-up delay-100">
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=400&auto=format&fit=crop"
+            alt="E-Commerce Platform"
+          />
+          <h3>E-Commerce Platform</h3>
+          <p class="project-tech">React JS | PHP | MySQL</p>
+          <p class="project-tag">Full Stack App</p>
+          <a href="project-detail.html" class="btn-primary">View Now</a>
+        </div>
+
+        <div class="project-card reveal slide-up delay-200">
+          <img
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=400&auto=format&fit=crop"
+            alt="Healthcare Mobile App"
+          />
+          <h3>Healthcare Mobile App</h3>
+          <p class="project-tech">React Native | REST API</p>
+          <p class="project-tag">Mobile Application</p>
+          <a href="project-detail.html" class="btn-primary">View Now</a>
+        </div>
+
+        <div class="project-card reveal slide-up delay-300">
+          <img
+            src="https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?q=80&w=400&auto=format&fit=crop"
+            alt="Pharma Web Portal"
+          />
+          <h3>Pharma Web Portal</h3>
+          <p class="project-tech">CodeIgniter | MySQL</p>
+          <p class="project-tag">Web Management System</p>
+          <a href="project-detail.html" class="btn-primary">View Now</a>
+        </div>
+
+        <div class="project-card reveal slide-up delay-400">
+          <img
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=400&auto=format&fit=crop"
+            alt="Recruitment Job Portal"
+          />
+          <h3>Recruitment Portal</h3>
+          <p class="project-tech">PHP | REST API | React</p>
+          <p class="project-tag">SaaS Application</p>
+          <a href="project-detail.html" class="btn-primary">View Now</a>
+        </div>
+      </div>
+
+      <div class="view-all-projects reveal zoom-in delay-200">
+        <a href="projects.html" class="btn-primary">View All Projects</a>
+      </div>
+    </section>
+
+    <!-- SERVICES / FEATURES SECTION -->
+    <section class="services-section" id="services">
+      <div class="section-header reveal slide-up">
+        <h2>Why Work With Me?</h2>
+        <p>
+          I build high-quality solutions tailored directly to your business
+          goals.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal zoom-in delay-100">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Full Stack Development</h3>
+          <p>
+            Complete web solutions with modern frontend and powerful backend
+            technologies.
+          </p>
+        </div>
+
+        <div class="service-card reveal zoom-in delay-200">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Web & Mobile Apps</h3>
+          <p>
+            Responsive websites and mobile applications designed for a seamless
+            user experience across all devices.
+          </p>
+        </div>
+
+        <div class="service-card reveal zoom-in delay-300">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Fast & Scalable</h3>
+          <p>
+            Clean, optimized, and scalable applications built for performance,
+            reliability, and future growth.
+          </p>
+        </div>
+
+        <div class="service-card reveal zoom-in delay-400">
+          <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Custom Solutions</h3>
+          <p>
+            Tailored digital solutions built around your business goals,
+            requirements, and unique ideas.
+          </p>
+        </div>
+      </div>
+
+      <div class="action-banner reveal slide-up">
+        <p>
+          Have a project requirement? Share your ideas, requirements, and goals
+          with me. Let's build a powerful digital solution together.
+        </p>
+
+        <a href="requirement.html" class="btn-primary">
+          Submit Your Requirement
+        </a>
+      </div>
+    </section>
+
+    <!-- DELIVERED PROJECTS SECTION -->
+    <section class="projects-section">
+      <div class="section-header reveal slide-up">
+        <h2>Delivered Projects</h2>
+        <p>
+          Explore some of the real-world web and mobile applications I have
+          successfully designed and developed for clients.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="project-card reveal slide-up delay-100">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=800&auto=format&fit=crop"
+            alt="Pharma Job Portal"
+          />
+          <h3>Pharma Jobs Hirelink</h3>
+          <p class="project-tech">React JS | PHP | MySQL</p>
+          <p class="project-tag">Job Portal</p>
+          <a href="project-detail.html" class="btn-primary">View Project</a>
+        </div>
+
+        <div class="project-card reveal slide-up delay-200">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+            alt="PCB Management System"
+          />
+          <h3>Secure Circuits</h3>
+          <p class="project-tech">React JS | CodeIgniter 4 | MySQL</p>
+          <p class="project-tag">PCB Management System</p>
+          <a href="project-detail.html" class="btn-primary">View Project</a>
+        </div>
+
+        <div class="project-card reveal slide-up delay-300">
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop"
+            alt="E-Commerce Website"
+          />
+          <h3>E-Commerce Platform</h3>
+          <p class="project-tech">React JS | PHP | MySQL</p>
+          <p class="project-tag">E-Commerce Application</p>
+          <a href="project-detail.html" class="btn-primary">View Project</a>
+        </div>
+
+        <div class="project-card reveal slide-up delay-400">
+          <img
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop"
+            alt="Admin Dashboard"
+          />
+          <h3>Business Admin Dashboard</h3>
+          <p class="project-tech">React JS | Bootstrap | REST API</p>
+          <p class="project-tag">Admin Management System</p>
+          <a href="project-detail.html" class="btn-primary">View Project</a>
+        </div>
+      </div>
+
+      <div class="view-all-projects reveal zoom-in delay-200">
+        <a href="projects.html" class="btn-primary">
+          View All Delivered Projects
+        </a>
+      </div>
+    </section>
+
+    <!-- PROMO SECTION -->
+    <section class="promo-section">
+      <div class="promo-container">
+        <div class="promo-content reveal slide-left">
+          <h2>Let's Turn Your Idea Into Reality.</h2>
+
+          <p>
+            Whether you need a modern website, a powerful web application, or a
+            mobile app, I can help you transform your vision into a reliable and
+            high-performing digital solution.
+          </p>
+
+          <a href="#contact" class="btn-primary">Let's Work Together</a>
+        </div>
+        <div class="promo-image reveal slide-right delay-200">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
+            alt="Web Developer Coding"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS / FEEDBACK SECTION -->
+    <section class="reviews-section" id="reviews">
+      <div class="section-header reveal slide-up">
+        <h2>Client Feedback & Experiences</h2>
+        <p>
+          See what clients have to say about working with me and bringing their
+          digital ideas to life.
+        </p>
+      </div>
+
+      <div class="testimonial-wrapper reveal zoom-in delay-100">
+        <button class="arrow-btn left-arrow" aria-label="Previous">&lt;</button>
+        <div class="testimonial-card">
+          <span class="quote-symbol">“</span>
+          <p class="testimonial-text">
+            Harshal delivered an exceptional web platform for our business. The
+            design is sleek, performance is top-notch, and communication was
+            super smooth throughout the development lifecycle!
+          </p>
+          <h3 class="author-name">Jonny Thomas</h3>
+          <p class="author-role">Project Manager</p>
+          <div class="author-avatar">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+              alt="Jonny Thomas"
+            />
+          </div>
+        </div>
+        <button class="arrow-btn right-arrow" aria-label="Next">&gt;</button>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section">
+      <div class="newsletter-content reveal slide-up">
+        <h2>Subscribe for Tech Updates & Insights</h2>
+        <p>
+          Get notified about new projects, technical insights, and development
+          updates.
+        </p>
+        <form class="newsletter-form" onsubmit="event.preventDefault()">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-col brand-col reveal slide-up delay-100">
+          <img src="logo.png" alt="Developer Harsh Logo" class="footer-logo" />
+          <p>
+            Building high-performance, responsive web & mobile applications
+            tailored to drive real business growth.
+          </p>
+        </div>
+        <div class="footer-col reveal slide-up delay-200">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#services">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal slide-up delay-300">
+          <h4 class="footer-heading">Services</h4>
+          <ul>
+            <li><a href="index.html#services">Full Stack Development</a></li>
+            <li><a href="index.html#services">Web & Mobile Apps</a></li>
+            <li><a href="index.html#services">Custom Web Solutions</a></li>
+            <li><a href="requirement.html">Your Requirements</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-col reveal slide-up delay-400">
+          <h4 class="footer-heading">Contact Us</h4>
+          <p>+91 8605621393</p>
+          <p>Maharashtra, India</p>
+          <p>
+            <a href="mailto:contact@developerharsh.com"
+              >contact@developerharsh.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Harshal Mahajan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="cursor-circle">
+      <span></span>
+    </div>
+
+    <button
+      id="scrollToTopBtn"
+      class="scroll-top-btn"
+      aria-label="Scroll to Top"
+    >
+      <i class="fa-solid fa-up-long"></i>
+    </button>
+    <script src="javascript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me | Harshal Mahajan</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Global Animation CSS File -->
+    <link rel="stylesheet" href="animations.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- CUSTOM NAVBAR -->
+    <nav class="custom-navbar">
+      <div class="nav-left">
+        <a href="index.html#home" class="brand-logo">Portfolio</a>
+        <div class="dot-separator">•</div>
+        <a href="tel:+918605621393" class="phone-badge">
+          <span class="phone-icon"><i class="fas fa-phone"></i></span>
+          <span>+91 8605621393</span>
+        </a>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu-list">
+        <li><a href="index.html#home" class="nav-item">Home</a></li>
+        <li><a href="index.html#about" class="nav-item">About</a></li>
+        <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+        <li><a href="index.html#services" class="nav-item">Services</a></li>
+        <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
+        <li><a href="contact.html" class="nav-item active">Contact</a></li>
+        <!-- मोबाईल मेनूमध्ये दाखवण्यासाठी Hire Me ची नवीन लिंक -->
+        <li class="mobile-only-item">
+          <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Theme Toggle Button (मोबाईल व डेस्कटॉप दोन्हीवर उजव्या बाजूला राहिल) -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle-btn"
+          aria-label="Toggle Theme"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- डेस्कटॉपवर दिसणारे Hire Me बटण -->
+        <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
+
+        <!-- Mobile Toggle Menu Button -->
+        <button
+          class="mobile-toggle-btn"
+          id="mobile-menu-toggle"
+          aria-label="Toggle Menu"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- CONTACT MAIN WRAPPER -->
+    <main class="contact-wrapper">
+      <div class="contact-header reveal slide-down">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="reveal slide-up delay-100">
+          Let's Discuss Your Next Project
+        </h2>
+        <p class="reveal slide-up delay-200">
+          Have a project idea, question, or just want to connect? Send me a
+          message and I'll get back to you within 24 hours.
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <!-- LEFT SIDE: CONTACT INFO -->
+        <div class="contact-info-col reveal slide-left delay-100">
+          <div class="info-card reveal zoom-in delay-100">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="info-details">
+              <h4>Call or WhatsApp</h4>
+              <p><a href="tel:+918605621393">+91 8605621393</a></p>
+              <span>Mon - Sat (9:00 AM - 8:00 PM)</span>
+            </div>
+          </div>
+
+          <div class="info-card reveal zoom-in delay-200">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-details">
+              <h4>Send an Email</h4>
+              <p>
+                <a href="mailto:contact@developerharsh.com"
+                  >contact@developerharsh.com</a
+                >
+              </p>
+              <span>24/7 Online Support</span>
+            </div>
+          </div>
+
+          <div class="info-card reveal zoom-in delay-300">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-details">
+              <h4>Location</h4>
+              <p>Maharashtra, India</p>
+              <span>Available for Remote Work Worldwide</span>
+            </div>
+          </div>
+
+          <!-- Social Links Box -->
+          <div class="social-box reveal zoom-in delay-400">
+            <h4>Follow & Connect</h4>
+            <div class="social-links">
+              <a href="#" class="social-icon" title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon" title="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="#" class="social-icon" title="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon" title="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: CONTACT FORM -->
+        <div class="contact-form-col reveal slide-right delay-200">
+          <form class="contact-form" onsubmit="event.preventDefault()">
+            <h3>Send a Message</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="example@mail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="Project Inquiry / Hiring"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Tell me about your project or requirements..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-send-message">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-col brand-col reveal slide-up delay-100">
+          <img src="logo.png" alt="Developer Harsh Logo" class="footer-logo" />
+          <p>
+            Building high-performance, responsive web & mobile applications
+            tailored to drive real business growth.
+          </p>
+        </div>
+        <div class="footer-col reveal slide-up delay-200">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#services">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal slide-up delay-300">
+          <h4 class="footer-heading">Services</h4>
+          <ul>
+            <li><a href="index.html#services">Full Stack Development</a></li>
+            <li><a href="index.html#services">Web & Mobile Apps</a></li>
+            <li><a href="index.html#services">Custom Web Solutions</a></li>
+            <li><a href="requirement.html">Your Requirements</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-col reveal slide-up delay-400">
+          <h4 class="footer-heading">Contact Us</h4>
+          <p>+91 8605621393</p>
+          <p>Maharashtra, India</p>
+          <p>
+            <a href="mailto:contact@developerharsh.com"
+              >contact@developerharsh.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 <strong>Developer Harsh</strong>. All rights reserved |
+          Designed by Developer Harsh
+        </p>
+      </div>
+    </footer>
+
+    <div class="cursor-circle">
+      <span></span>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button
+      id="scrollToTopBtn"
+      class="scroll-top-btn"
+      aria-label="Scroll to Top"
+    >
+      <i class="fa-solid fa-up-long"></i>
+    </button>
+
+    <!-- SCRIPT -->
+    <script src="javascript.js"></script>
+  </body>
+</html>
