@@ -41,14 +41,12 @@
         <li><a href="index.html#services" class="nav-item">Services</a></li>
         <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
         <li><a href="contact.html" class="nav-item active">Contact</a></li>
-        <!-- मोबाईल मेनूमध्ये दाखवण्यासाठी Hire Me ची नवीन लिंक -->
         <li class="mobile-only-item">
           <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
         </li>
       </ul>
 
       <div class="nav-right">
-        <!-- Theme Toggle Button (मोबाईल व डेस्कटॉप दोन्हीवर उजव्या बाजूला राहिल) -->
         <button
           id="theme-toggle"
           class="theme-toggle-btn"
@@ -57,7 +55,6 @@
           <i class="fas fa-moon"></i>
         </button>
 
-        <!-- डेस्कटॉपवर दिसणारे Hire Me बटण -->
         <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
 
         <!-- Mobile Toggle Menu Button -->
@@ -138,63 +135,40 @@
             <!-- Overlay Content -->
             <div class="banner-overlay">
               <div class="title-preview-row reveal slide-up delay-100">
-                <h1 class="project-main-title">
-                  E-Commerce Web Platform (React & PHP)
+                <h1 class="project-main-title" id="detail-title">
+                  Project Title
                 </h1>
                 <a
-                  href="https://your-live-demo-link.com"
+                  href="#"
                   target="_blank"
                   class="btn-live-preview"
+                  id="detail-live-link"
                 >
                   <i class="fas fa-external-link-alt"></i> Live Preview
                 </a>
               </div>
 
               <div class="project-stats-row reveal slide-up delay-200">
-                <span class="stat-badge"
-                  ><i class="fas fa-eye"></i> 1,450 Views</span
+                <span class="stat-badge" id="detail-views"
+                  ><i class="fas fa-eye"></i> 0 Views</span
                 >
-                <span class="stat-badge"
-                  ><i class="fas fa-shopping-bag"></i> 89 Purchases</span
+                <span class="stat-badge" id="detail-purchases"
+                  ><i class="fas fa-shopping-bag"></i> 0 Purchases</span
                 >
-                <span class="stat-badge"
-                  ><i class="fas fa-star"></i> 4.9 Rating</span
+                <span class="stat-badge" id="detail-rating"
+                  ><i class="fas fa-star"></i> 5.0 Rating</span
                 >
               </div>
             </div>
           </div>
 
           <!-- Project Description Section -->
-          <section
-            class="project-description-section reveal slide-up delay-100"
-          >
+          <section class="project-description-section">
             <h2>Project Overview</h2>
-            <p>
-              This project is a high-performance, fully functional E-Commerce
-              application engineered using React JS for dynamic front-end views
-              and PHP CodeIgniter for back-end API management. Designed for
-              scalability, speed, and real-time order tracking.
-            </p>
+            <p id="detail-overview">Project description will appear here...</p>
 
             <h3>Key Highlights</h3>
-            <ul class="description-list">
-              <li class="reveal slide-up delay-100">
-                <i class="fas fa-check-circle"></i> Complete Admin Dashboard
-                with analytics & real-time reports.
-              </li>
-              <li class="reveal slide-up delay-200">
-                <i class="fas fa-check-circle"></i> Integrated Razorpay / PayPal
-                Secure Payment Gateways.
-              </li>
-              <li class="reveal slide-up delay-300">
-                <i class="fas fa-check-circle"></i> Mobile-responsive and
-                cross-browser tested UI layout.
-              </li>
-              <li class="reveal slide-up delay-400">
-                <i class="fas fa-check-circle"></i> REST API-driven architecture
-                for seamless mobile application integration.
-              </li>
-            </ul>
+            <ul class="description-list" id="detail-highlights"></ul>
           </section>
 
           <!-- Client Comment & Review Form Section -->
@@ -313,9 +287,11 @@
           <div class="pricing-card">
             <div class="pricing-header">
               <span class="badge-tag">Full Source Code</span>
-              <div class="price-amount">
-                <span class="currency">₹</span>4,999
-                <span class="original-price">₹8,999</span>
+              <div class="price-amount" id="detail-price">
+                <span class="currency">₹</span>0
+                <span class="original-price" id="detail-original-price"
+                  >₹0</span
+                >
               </div>
               <p class="price-note">One-time payment • Lifetime updates</p>
             </div>
@@ -369,7 +345,11 @@
     <footer class="site-footer" id="contact">
       <div class="footer-container">
         <div class="footer-col brand-col reveal slide-up delay-100">
-          <img src="Image/logo.png" alt="Developer Harsh Logo" class="footer-logo" />
+          <img
+            src="Image/logo.png"
+            alt="Developer Harsh Logo"
+            class="footer-logo"
+          />
           <p>
             Building high-performance, responsive web & mobile applications
             tailored to drive real business growth.
