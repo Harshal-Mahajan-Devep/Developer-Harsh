@@ -1,196 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // =========================================================
-  // 1. iOS HIGH-PRECISION SCROLL OBSERVER (Animations)
-  // =========================================================
-  const revealElements = document.querySelectorAll(".reveal");
-
-  if (revealElements.length > 0) {
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            window.requestAnimationFrame(() => {
-              entry.target.classList.add("active");
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12,
-        rootMargin: "0px 0px -20px 0px",
-      },
-    );
-
-    revealElements.forEach((el) => revealObserver.observe(el));
-  }
-
-  // =========================================================
-  // 2. MOBILE MENU TOGGLE LOGIC
-  // =========================================================
-  const menuToggle = document.getElementById("mobile-menu-toggle");
-  const navMenu = document.getElementById("nav-menu-list");
-
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-
-      const icon = menuToggle.querySelector("i");
-      if (icon) {
-        if (navMenu.classList.contains("active")) {
-          icon.classList.remove("fa-bars");
-          icon.classList.add("fa-xmark");
-        } else {
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-        }
-      }
-    });
-
-    document.querySelectorAll(".nav-item").forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        const icon = menuToggle.querySelector("i");
-        if (icon) {
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-        }
-      });
-    });
-  }
-
-  // =========================================================
-  // 3. SCROLL TO TOP BUTTON ENGINE
-  // =========================================================
-  const scrollTopBtn = document.getElementById("scrollToTopBtn");
-
-  if (scrollTopBtn) {
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (
-          window.pageYOffset > 200 ||
-          document.documentElement.scrollTop > 200
-        ) {
-          scrollTopBtn.classList.add("show-btn");
-        } else {
-          scrollTopBtn.classList.remove("show-btn");
-        }
-      },
-      { passive: true },
-    );
-
-    scrollTopBtn.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-  }
-
-  // =========================================================
-  // 4. PROJECT DETAIL 4-IMAGE SLIDER
-  // =========================================================
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
-  const sliderTrack = document.getElementById("slider-track");
-
-  if (nextBtn && prevBtn && sliderTrack) {
-    let currentSlide = 0;
-    const totalSlides = 4;
-    const dots = document.querySelectorAll(".dot");
-
-    function updateSlider() {
-      sliderTrack.style.transform = `translateX(-${currentSlide * 25}%)`;
-      dots.forEach((dot, index) => {
-        if (index === currentSlide) {
-          dot.classList.add("active");
-        } else {
-          dot.classList.remove("active");
-        }
-      });
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlider();
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSlider();
-    }
-
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
-
-    let autoSlideInterval = setInterval(nextSlide, 4000);
-
-    const sliderWrapper = document.querySelector(".slider-wrapper");
-    if (sliderWrapper) {
-      sliderWrapper.addEventListener("mouseenter", () =>
-        clearInterval(autoSlideInterval),
-      );
-      sliderWrapper.addEventListener("mouseleave", () => {
-        autoSlideInterval = setInterval(nextSlide, 4000);
-      });
-    }
-  }
-
-  // =========================================================
-  // 5. DARK / LIGHT MODE TOGGLE ENGINE
-  // =========================================================
-  const themeToggleBtn = document.getElementById("theme-toggle");
-  const currentTheme = localStorage.getItem("theme");
-
-  // Load Saved Theme
-  if (currentTheme === "dark") {
-    document.body.classList.add("dark-mode");
-    if (themeToggleBtn) {
-      themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-  }
-
-  // Toggle Theme Event
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", function () {
-      document.body.classList.toggle("dark-mode");
-
-      let theme = "light";
-      if (document.body.classList.contains("dark-mode")) {
-        theme = "dark";
-        themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-      } else {
-        themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-      }
-
-      localStorage.setItem("theme", theme);
-    });
-  }
-
-  // =========================================================
-  // 6. CUSTOM CURSOR TRAIL (Optional Effect)
-  // =========================================================
-  const cursor = document.querySelector(".cursor-circle");
-  if (cursor) {
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    });
-  }
-});
-
-// =========================================================
-// 7. CAPTCHA REFRESH FUNCTION
-// =========================================================
-function refreshCaptcha() {
-  const captchaElem = document.getElementById("captcha-code");
-  if (captchaElem) {
-    const randomNum = Math.floor(100000 + Math.random() * 900000);
-    captchaElem.innerText = randomNum;
-  }
-}
-
 const projectsData = {
   jobportal: {
     title: "NexusJobs – Premium Job Portal",
@@ -214,7 +21,6 @@ const projectsData = {
       "Interactive UI components including filters, dropdowns, bookmarks, theme switching, modals, and smooth transitions.",
       "Built as a multi-page responsive career platform for desktop, tablet, and mobile users.",
     ],
-    // 1. jobportal साठी इमेजेस (Image path आणि extension बरोबर द्या)
     images: [
       "Image/jobmain.png",
       "Image/jobprofile.png",
@@ -238,7 +44,6 @@ const projectsData = {
       "Prescription upload and secure patient report storage.",
       "Cross-platform support for both Android and iOS devices.",
     ],
-    // 2. healthcare च्या इमेजेस
     images: [
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1000&auto=format&fit=crop",
@@ -294,24 +99,181 @@ const projectsData = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+function refreshCaptcha() {
+  const captchaElem = document.getElementById("captcha-code");
+  if (captchaElem) {
+    const randomNum = Math.floor(100000 + Math.random() * 900000);
+    captchaElem.innerText = String(randomNum);
+  }
+}
+
+let goToSlide = () => {};
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-menu .nav-item");
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const isIndex = currentPage === "index.html" || currentPage === "";
+  const sections = document.querySelectorAll("header[id], section[id]");
+
+  function updateNavbarActive() {
+    if (isIndex && sections.length > 0) {
+      let currentSectionId = "";
+      const scrollPosition = window.pageYOffset + 120;
+
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollPosition >= top && scrollPosition < top + height) {
+          currentSectionId = section.getAttribute("id");
+        }
+      });
+
+      if (!currentSectionId && window.pageYOffset < 150) {
+        currentSectionId = "home";
+      }
+
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (href.includes("#" + currentSectionId)) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    } else {
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        const linkPage = href.split("#")[0];
+
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    }
+  }
+
+  updateNavbarActive();
+  window.addEventListener("scroll", updateNavbarActive, { passive: true });
+
+  const filterButtons = document.querySelectorAll(".filter-tabs .tab-btn");
+  if (filterButtons.length > 0) {
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+  }
+
+  const revealElements = document.querySelectorAll(".reveal");
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.requestAnimationFrame(() => {
+              entry.target.classList.add("active");
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -20px 0px",
+      },
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+  }
+
+  const menuToggle = document.getElementById("mobile-menu-toggle");
+  const navMenu = document.getElementById("nav-menu-list");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      if (icon) {
+        if (navMenu.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+        } else {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        }
+      }
+    });
+
+    document.querySelectorAll(".nav-item").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        const icon = menuToggle.querySelector("i");
+        if (icon) {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        }
+      });
+    });
+  }
+
+  const scrollTopBtn = document.getElementById("scrollToTopBtn");
+  if (scrollTopBtn) {
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (
+          window.pageYOffset > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          scrollTopBtn.classList.add("show-btn");
+        } else {
+          scrollTopBtn.classList.remove("show-btn");
+        }
+      },
+      { passive: true },
+    );
+
+    scrollTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
   const urlParams = new URLSearchParams(window.location.search);
-  const projectId = urlParams.get("id") || "jobportal"; // 'ecommerce' ऐवजी 'jobportal'
+  const projectId = urlParams.get("id") || "jobportal";
   const project = projectsData[projectId];
 
   if (project && document.getElementById("detail-title")) {
     document.title = `${project.title} | Details`;
     document.getElementById("detail-title").textContent = project.title;
-    document.getElementById("detail-live-link").href = project.liveUrl;
-    document.getElementById("detail-views").innerHTML =
-      `<i class="fas fa-eye"></i> ${project.views}`;
-    document.getElementById("detail-purchases").innerHTML =
-      `<i class="fas fa-shopping-bag"></i> ${project.purchases}`;
-    document.getElementById("detail-rating").innerHTML =
-      `<i class="fas fa-star"></i> ${project.rating}`;
-    document.getElementById("detail-overview").textContent = project.overview;
-    document.getElementById("detail-price").innerHTML =
-      `<span class="currency">₹</span>${project.price} <span class="original-price">${project.originalPrice}</span>`;
+
+    const liveLink = document.getElementById("detail-live-link");
+    if (liveLink) liveLink.href = project.liveUrl;
+
+    const viewsEl = document.getElementById("detail-views");
+    if (viewsEl)
+      viewsEl.innerHTML = `<i class="fas fa-eye"></i> ${project.views}`;
+
+    const purchasesEl = document.getElementById("detail-purchases");
+    if (purchasesEl)
+      purchasesEl.innerHTML = `<i class="fas fa-shopping-bag"></i> ${project.purchases}`;
+
+    const ratingEl = document.getElementById("detail-rating");
+    if (ratingEl)
+      ratingEl.innerHTML = `<i class="fas fa-star"></i> ${project.rating}`;
+
+    const overviewEl = document.getElementById("detail-overview");
+    if (overviewEl) overviewEl.textContent = project.overview;
+
+    const priceEl = document.getElementById("detail-price");
+    if (priceEl) {
+      priceEl.innerHTML = `<span class="currency">₹</span>${project.price} <span class="original-price">${project.originalPrice}</span>`;
+    }
 
     const highlightsList = document.getElementById("detail-highlights");
     if (highlightsList) {
@@ -320,7 +282,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .join("");
     }
 
-    // Slider Images Inject करणे
     const sliderTrack = document.getElementById("slider-track");
     if (sliderTrack && project.images && project.images.length > 0) {
       sliderTrack.innerHTML = project.images
@@ -333,5 +294,99 @@ document.addEventListener("DOMContentLoaded", () => {
         )
         .join("");
     }
+  }
+
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const sliderTrack = document.getElementById("slider-track");
+  const dotsContainer = document.getElementById("slider-dots");
+
+  if (sliderTrack) {
+    let currentSlide = 0;
+    const slides = sliderTrack.querySelectorAll(".slide");
+    const totalSlides = slides.length || 4;
+
+    if (dotsContainer && slides.length > 0) {
+      dotsContainer.innerHTML = Array.from(
+        { length: totalSlides },
+        (_, i) =>
+          `<span class="dot ${i === 0 ? "active" : ""}" data-slide="${i}"></span>`,
+      ).join("");
+    }
+
+    const dots = document.querySelectorAll(".dot");
+
+    function updateSlider() {
+      sliderTrack.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+
+    goToSlide = function (index) {
+      currentSlide = index;
+      updateSlider();
+    };
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const slideIndex = parseInt(dot.getAttribute("data-slide"), 10);
+        goToSlide(slideIndex);
+      });
+    });
+
+    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+    let autoSlideInterval = setInterval(nextSlide, 4000);
+
+    const sliderWrapper = document.querySelector(".slider-wrapper");
+    if (sliderWrapper) {
+      sliderWrapper.addEventListener("mouseenter", () =>
+        clearInterval(autoSlideInterval),
+      );
+      sliderWrapper.addEventListener("mouseleave", () => {
+        autoSlideInterval = setInterval(nextSlide, 4000);
+      });
+    }
+  }
+
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  const currentTheme = localStorage.getItem("theme");
+
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    if (themeToggleBtn) {
+      themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      themeToggleBtn.innerHTML = isDark
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  }
+
+  const cursor = document.querySelector(".cursor-circle");
+  if (cursor) {
+    window.addEventListener("mousemove", (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
   }
 });

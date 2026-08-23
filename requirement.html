@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Requirements | Harshal Mahajan</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Global Animation CSS File -->
     <link rel="stylesheet" href="animations.css" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
   <body>
-    <!-- CUSTOM NAVBAR -->
     <nav class="custom-navbar">
       <div class="nav-left">
         <a href="index.html#home" class="brand-logo">Portfolio</a>
@@ -38,17 +32,16 @@
         <li><a href="index.html#home" class="nav-item">Home</a></li>
         <li><a href="index.html#about" class="nav-item">About</a></li>
         <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+        <li><a href="index.html#delivered" class="nav-item">Delivered</a></li>
         <li><a href="index.html#services" class="nav-item">Services</a></li>
         <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
-        <li><a href="contact.html" class="nav-item active">Contact</a></li>
-        <!-- मोबाईल मेनूमध्ये दाखवण्यासाठी Hire Me ची नवीन लिंक -->
+        <li><a href="contact.html" class="nav-item">Contact</a></li>
         <li class="mobile-only-item">
           <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
         </li>
       </ul>
 
       <div class="nav-right">
-        <!-- Theme Toggle Button (मोबाईल व डेस्कटॉप दोन्हीवर उजव्या बाजूला राहिल) -->
         <button
           id="theme-toggle"
           class="theme-toggle-btn"
@@ -57,10 +50,8 @@
           <i class="fas fa-moon"></i>
         </button>
 
-        <!-- डेस्कटॉपवर दिसणारे Hire Me बटण -->
         <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
 
-        <!-- Mobile Toggle Menu Button -->
         <button
           class="mobile-toggle-btn"
           id="mobile-menu-toggle"
@@ -70,7 +61,7 @@
         </button>
       </div>
     </nav>
-    <!-- CLIENT REQUIREMENT FORM SECTION -->
+
     <main class="req-wrapper">
       <div class="req-header reveal slide-down">
         <span class="req-badge">Let's Build Together</span>
@@ -83,7 +74,6 @@
 
       <div class="req-card reveal zoom-in delay-200">
         <form class="req-form" onsubmit="event.preventDefault()">
-          <!-- Section 1: Client Information -->
           <div class="form-section-title reveal slide-left">
             <i class="fas fa-user"></i>
             <h3>Client Information</h3>
@@ -130,7 +120,6 @@
             </div>
           </div>
 
-          <!-- Section 2: Project Type & Scope -->
           <div class="form-section-title reveal slide-left">
             <i class="fas fa-layer-group"></i>
             <h3>Project Scope & Details</h3>
@@ -210,7 +199,6 @@
             </div>
           </div>
 
-          <!-- Section 3: Technical Specifications -->
           <div class="form-section-title reveal slide-left">
             <i class="fas fa-code"></i>
             <h3>Technical & Feature Requirements</h3>
@@ -243,7 +231,6 @@
             </div>
           </div>
 
-          <!-- Section 4: Submission & Captcha -->
           <div class="form-section-title reveal slide-left">
             <i class="fas fa-shield-alt"></i>
             <h3>Verification</h3>
@@ -282,11 +269,14 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer" id="contact">
       <div class="footer-container">
         <div class="footer-col brand-col reveal slide-up delay-100">
-          <img src="Image/logo.png" alt="Developer Harsh Logo" class="footer-logo" />
+          <img
+            src="Image/logo.png"
+            alt="Developer Harsh Logo"
+            class="footer-logo"
+          />
           <p>
             Building high-performance, responsive web & mobile applications
             tailored to drive real business growth.
@@ -330,7 +320,6 @@
       <span></span>
     </div>
 
-    <!-- SCROLL TO TOP BUTTON -->
     <button
       id="scrollToTopBtn"
       class="scroll-top-btn"
@@ -339,7 +328,6 @@
       <i class="fa-solid fa-up-long"></i>
     </button>
 
-    <!-- SCRIPT -->
     <script src="javascript.js"></script>
   </body>
 </html>

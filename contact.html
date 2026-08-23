@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me | Harshal Mahajan</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Global Animation CSS File -->
     <link rel="stylesheet" href="animations.css" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
   <body>
-    <!-- CUSTOM NAVBAR -->
     <nav class="custom-navbar">
       <div class="nav-left">
         <a href="index.html#home" class="brand-logo">Portfolio</a>
@@ -38,17 +32,16 @@
         <li><a href="index.html#home" class="nav-item">Home</a></li>
         <li><a href="index.html#about" class="nav-item">About</a></li>
         <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+        <li><a href="index.html#delivered" class="nav-item">Delivered</a></li>
         <li><a href="index.html#services" class="nav-item">Services</a></li>
         <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
-        <li><a href="contact.html" class="nav-item active">Contact</a></li>
-        <!-- मोबाईल मेनूमध्ये दाखवण्यासाठी Hire Me ची नवीन लिंक -->
+        <li><a href="contact.html" class="nav-item">Contact</a></li>
         <li class="mobile-only-item">
           <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
         </li>
       </ul>
 
       <div class="nav-right">
-        <!-- Theme Toggle Button (मोबाईल व डेस्कटॉप दोन्हीवर उजव्या बाजूला राहिल) -->
         <button
           id="theme-toggle"
           class="theme-toggle-btn"
@@ -57,10 +50,8 @@
           <i class="fas fa-moon"></i>
         </button>
 
-        <!-- डेस्कटॉपवर दिसणारे Hire Me बटण -->
         <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
 
-        <!-- Mobile Toggle Menu Button -->
         <button
           class="mobile-toggle-btn"
           id="mobile-menu-toggle"
@@ -71,7 +62,6 @@
       </div>
     </nav>
 
-    <!-- CONTACT MAIN WRAPPER -->
     <main class="contact-wrapper">
       <div class="contact-header reveal slide-down">
         <span class="section-badge">Get In Touch</span>
@@ -85,7 +75,6 @@
       </div>
 
       <div class="contact-container">
-        <!-- LEFT SIDE: CONTACT INFO -->
         <div class="contact-info-col reveal slide-left delay-100">
           <div class="info-card reveal zoom-in delay-100">
             <div class="info-icon">
@@ -124,27 +113,37 @@
             </div>
           </div>
 
-          <!-- Social Links Box -->
           <div class="social-box reveal zoom-in delay-400">
             <h4>Follow & Connect</h4>
             <div class="social-links">
-              <a href="#" class="social-icon" title="LinkedIn"
+              <a
+                href="#"
+                class="social-icon"
+                title="LinkedIn"
+                aria-label="LinkedIn"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
-              <a href="#" class="social-icon" title="GitHub"
+              <a href="#" class="social-icon" title="GitHub" aria-label="GitHub"
                 ><i class="fab fa-github"></i
               ></a>
-              <a href="#" class="social-icon" title="Twitter"
+              <a
+                href="#"
+                class="social-icon"
+                title="Twitter"
+                aria-label="Twitter"
                 ><i class="fab fa-twitter"></i
               ></a>
-              <a href="#" class="social-icon" title="Instagram"
+              <a
+                href="#"
+                class="social-icon"
+                title="Instagram"
+                aria-label="Instagram"
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT SIDE: CONTACT FORM -->
         <div class="contact-form-col reveal slide-right delay-200">
           <form class="contact-form" onsubmit="event.preventDefault()">
             <h3>Send a Message</h3>
@@ -199,11 +198,14 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer" id="contact">
       <div class="footer-container">
         <div class="footer-col brand-col reveal slide-up delay-100">
-          <img src="Image/logo.png" alt="Developer Harsh Logo" class="footer-logo" />
+          <img
+            src="Image/logo.png"
+            alt="Developer Harsh Logo"
+            class="footer-logo"
+          />
           <p>
             Building high-performance, responsive web & mobile applications
             tailored to drive real business growth.
@@ -250,7 +252,6 @@
       <span></span>
     </div>
 
-    <!-- SCROLL TO TOP BUTTON -->
     <button
       id="scrollToTopBtn"
       class="scroll-top-btn"
@@ -259,7 +260,6 @@
       <i class="fa-solid fa-up-long"></i>
     </button>
 
-    <!-- SCRIPT -->
     <script src="javascript.js"></script>
   </body>
 </html>

@@ -3,27 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Details | Full Stack E-Commerce Platform</title>
+    <title>Project Details | Full Stack Platform</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Global Animation CSS File -->
     <link rel="stylesheet" href="animations.css" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
   <body>
-    <!-- CUSTOM NAVBAR -->
     <nav class="custom-navbar">
       <div class="nav-left">
         <a href="index.html#home" class="brand-logo">Portfolio</a>
@@ -38,9 +32,10 @@
         <li><a href="index.html#home" class="nav-item">Home</a></li>
         <li><a href="index.html#about" class="nav-item">About</a></li>
         <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+        <li><a href="index.html#delivered" class="nav-item">Delivered</a></li>
         <li><a href="index.html#services" class="nav-item">Services</a></li>
         <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
-        <li><a href="contact.html" class="nav-item active">Contact</a></li>
+        <li><a href="contact.html" class="nav-item">Contact</a></li>
         <li class="mobile-only-item">
           <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
         </li>
@@ -57,7 +52,6 @@
 
         <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
 
-        <!-- Mobile Toggle Menu Button -->
         <button
           class="mobile-toggle-btn"
           id="mobile-menu-toggle"
@@ -68,12 +62,9 @@
       </div>
     </nav>
 
-    <!-- MAIN PROJECT DETAILS CONTAINER -->
     <main class="project-detail-wrapper">
       <div class="project-container">
-        <!-- LEFT COLUMN (Content, Slider & Comments) -->
         <div class="project-left-col">
-          <!-- 4-IMAGE SLIDER BANNER CARD -->
           <div class="project-banner-card reveal slide-down">
             <div class="slider-wrapper">
               <div class="slider-track" id="slider-track">
@@ -107,7 +98,6 @@
                 </div>
               </div>
 
-              <!-- Navigation Arrows -->
               <button
                 class="slider-arrow prev-arrow"
                 id="prevBtn"
@@ -123,16 +113,14 @@
                 <i class="fas fa-chevron-right"></i>
               </button>
 
-              <!-- Dots Indicator -->
               <div class="slider-dots" id="slider-dots">
-                <span class="dot active" onclick="goToSlide(0)"></span>
-                <span class="dot" onclick="goToSlide(1)"></span>
-                <span class="dot" onclick="goToSlide(2)"></span>
-                <span class="dot" onclick="goToSlide(3)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
               </div>
             </div>
 
-            <!-- Overlay Content -->
             <div class="banner-overlay">
               <div class="title-preview-row reveal slide-up delay-100">
                 <h1 class="project-main-title" id="detail-title">
@@ -141,6 +129,7 @@
                 <a
                   href="#"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="btn-live-preview"
                   id="detail-live-link"
                 >
@@ -162,7 +151,6 @@
             </div>
           </div>
 
-          <!-- Project Description Section -->
           <section class="project-description-section">
             <h2>Project Overview</h2>
             <p id="detail-overview">Project description will appear here...</p>
@@ -171,7 +159,6 @@
             <ul class="description-list" id="detail-highlights"></ul>
           </section>
 
-          <!-- Client Comment & Review Form Section -->
           <section class="comment-section reveal slide-up delay-200">
             <h2>Leave a Client Review & Comment</h2>
             <p class="comment-subtext">
@@ -211,7 +198,6 @@
                 ></textarea>
               </div>
 
-              <!-- 6 Digit Captcha Box -->
               <div class="captcha-box reveal slide-up delay-300">
                 <div class="captcha-display">
                   <span class="captcha-code" id="captcha-code">849201</span>
@@ -243,7 +229,6 @@
               </button>
             </form>
 
-            <!-- Existing Client Comments Display -->
             <div class="existing-comments">
               <h3 class="reveal slide-up">Client Reviews (2)</h3>
 
@@ -282,7 +267,6 @@
           </section>
         </div>
 
-        <!-- RIGHT COLUMN (Sticky Price & Checklist Card) -->
         <aside class="project-right-col reveal slide-right delay-200">
           <div class="pricing-card">
             <div class="pricing-header">
@@ -341,7 +325,6 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer" id="contact">
       <div class="footer-container">
         <div class="footer-col brand-col reveal slide-up delay-100">
@@ -393,7 +376,6 @@
       <span></span>
     </div>
 
-    <!-- SCROLL TO TOP BUTTON -->
     <button
       id="scrollToTopBtn"
       class="scroll-top-btn"
@@ -402,7 +384,6 @@
       <i class="fa-solid fa-up-long"></i>
     </button>
 
-    <!-- SCRIPT -->
     <script src="javascript.js"></script>
   </body>
 </html>

@@ -1,13 +1,8 @@
-/* =========================================================
-   APPLE / iOS ULTRA SMOOTH SCROLL ANIMATIONS
-   ========================================================= */
-
 :root {
   --ios-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ios-spring: cubic-bezier(0.34, 1.35, 0.64, 1);
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -18,10 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================================================
-   BASE REVEAL
-   ========================================================= */
-
 .reveal {
   opacity: 0;
   transform: translate3d(0, 35px, 0) scale3d(0.97, 0.97, 1);
@@ -29,27 +20,17 @@ body {
     opacity 0.8s var(--ios-ease),
     transform 0.9s var(--ios-ease),
     filter 0.7s var(--ios-ease);
-
   will-change: transform, opacity, filter;
-
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-
   transform-origin: center center;
 }
 
-/* Active */
 .reveal.active {
   opacity: 1;
-
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-
   filter: blur(0);
 }
-
-/* =========================================================
-   SLIDE DIRECTIONS
-   ========================================================= */
 
 .slide-up {
   transform: translate3d(0, 45px, 0) scale3d(0.97, 0.97, 1);
@@ -71,22 +52,15 @@ body {
   transform: translate3d(0, 25px, 0) scale3d(0.92, 0.92, 1);
 }
 
-/* Active state */
 .reveal.slide-up.active,
 .reveal.slide-down.active,
 .reveal.slide-left.active,
 .reveal.slide-right.active,
 .reveal.zoom-in.active {
   opacity: 1;
-
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-
   filter: blur(0);
 }
-
-/* =========================================================
-   STAGGER DELAYS
-   ========================================================= */
 
 .delay-100 {
   transition-delay: 0.1s;

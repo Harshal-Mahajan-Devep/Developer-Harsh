@@ -5,26 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Projects | Harshal Mahajan</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Global Animation CSS File -->
     <link rel="stylesheet" href="animations.css" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
   <body>
-    <!-- SAME CUSTOM NAVBAR -->
-     <nav class="custom-navbar">
+    <nav class="custom-navbar">
       <div class="nav-left">
         <a href="index.html#home" class="brand-logo">Portfolio</a>
         <div class="dot-separator">•</div>
@@ -37,18 +31,17 @@
       <ul class="nav-menu" id="nav-menu-list">
         <li><a href="index.html#home" class="nav-item">Home</a></li>
         <li><a href="index.html#about" class="nav-item">About</a></li>
-        <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+        <li><a href="projects.html" class="nav-item">Projects</a></li>
+        <li><a href="index.html#delivered" class="nav-item">Delivered</a></li>
         <li><a href="index.html#services" class="nav-item">Services</a></li>
         <li><a href="index.html#reviews" class="nav-item">Reviews</a></li>
-        <li><a href="contact.html" class="nav-item active">Contact</a></li>
-        <!-- मोबाईल मेनूमध्ये दाखवण्यासाठी Hire Me ची नवीन लिंक -->
+        <li><a href="contact.html" class="nav-item">Contact</a></li>
         <li class="mobile-only-item">
           <a href="hire-me.html" class="btn-hire mobile-hire-btn">Hire Me</a>
         </li>
       </ul>
 
       <div class="nav-right">
-        <!-- Theme Toggle Button (मोबाईल व डेस्कटॉप दोन्हीवर उजव्या बाजूला राहिल) -->
         <button
           id="theme-toggle"
           class="theme-toggle-btn"
@@ -57,10 +50,8 @@
           <i class="fas fa-moon"></i>
         </button>
 
-        <!-- डेस्कटॉपवर दिसणारे Hire Me बटण -->
         <a href="hire-me.html" class="btn-hire desktop-only">Hire Me</a>
 
-        <!-- Mobile Toggle Menu Button -->
         <button
           class="mobile-toggle-btn"
           id="mobile-menu-toggle"
@@ -71,7 +62,6 @@
       </div>
     </nav>
 
-    <!-- ALL PROJECTS SECTION -->
     <main class="all-projects-wrapper">
       <div class="projects-header reveal slide-down">
         <span class="section-badge">My Creative Work</span>
@@ -81,7 +71,6 @@
           with clean code and modern tech stack.
         </p>
 
-        <!-- Category Filter Buttons -->
         <div class="filter-tabs reveal zoom-in delay-300">
           <button class="tab-btn active">All Work</button>
           <button class="tab-btn">Web Apps</button>
@@ -90,9 +79,7 @@
         </div>
       </div>
 
-      <!-- PROJECT CARDS GRID -->
       <div class="portfolio-grid">
-        <!-- Project Card 1 -->
         <div class="portfolio-card reveal slide-up delay-100">
           <div class="card-image-box">
             <img
@@ -113,14 +100,13 @@
               <span>REST API</span>
             </div>
             <div class="card-footer">
-              <a href="project-detail.html" class="btn-details"
+              <a href="project-detail.html?id=pharma" class="btn-details"
                 >View Case Study &rarr;</a
               >
             </div>
           </div>
         </div>
 
-        <!-- Project Card 2 -->
         <div class="portfolio-card reveal slide-up delay-200">
           <div class="card-image-box">
             <img
@@ -141,14 +127,13 @@
               <span>REST API</span>
             </div>
             <div class="card-footer">
-              <a href="project-detail.html" class="btn-details"
+              <a href="project-detail.html?id=healthcare" class="btn-details"
                 >View Case Study &rarr;</a
               >
             </div>
           </div>
         </div>
 
-        <!-- Project Card 3 -->
         <div class="portfolio-card reveal slide-up delay-300">
           <div class="card-image-box">
             <img
@@ -169,14 +154,13 @@
               <span>MySQL</span>
             </div>
             <div class="card-footer">
-              <a href="project-detail.html" class="btn-details"
+              <a href="project-detail.html?id=recruitment" class="btn-details"
                 >View Case Study &rarr;</a
               >
             </div>
           </div>
         </div>
 
-        <!-- Project Card 4 -->
         <div class="portfolio-card reveal slide-up delay-400">
           <div class="card-image-box">
             <img
@@ -197,7 +181,7 @@
               <span>Razorpay</span>
             </div>
             <div class="card-footer">
-              <a href="project-detail.html" class="btn-details"
+              <a href="project-detail.html?id=jobportal" class="btn-details"
                 >View Case Study &rarr;</a
               >
             </div>
@@ -206,11 +190,14 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer" id="contact">
       <div class="footer-container">
         <div class="footer-col brand-col reveal slide-up delay-100">
-          <img src="Image/logo.png" alt="Developer Harsh Logo" class="footer-logo" />
+          <img
+            src="Image/logo.png"
+            alt="Developer Harsh Logo"
+            class="footer-logo"
+          />
           <p>
             Building high-performance, responsive web & mobile applications
             tailored to drive real business growth.
@@ -254,7 +241,6 @@
       <span></span>
     </div>
 
-    <!-- SCROLL TO TOP BUTTON -->
     <button
       id="scrollToTopBtn"
       class="scroll-top-btn"
@@ -263,7 +249,6 @@
       <i class="fa-solid fa-up-long"></i>
     </button>
 
-    <!-- SCRIPT -->
     <script src="javascript.js"></script>
   </body>
 </html>
